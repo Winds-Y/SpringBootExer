@@ -1,6 +1,8 @@
 package com.example.springbootexer;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -10,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class HelloSpringBoot {
-    @RequestMapping("/index")
-    public String index(){
+    @RequestMapping("/")
+    public String index(ModelMap map){
+        map.addAttribute("host","http://blog.didispace.com");
         return "hello";
     }
 }
