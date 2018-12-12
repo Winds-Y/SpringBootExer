@@ -60,6 +60,7 @@ public class PageController {
         map.put("msg",msg);
         return map;
     }
+
     @PostMapping("/CheckCode")
     @ResponseBody
     public Map<String,String>CheckCode(HttpSession httpSession, User user, @RequestParam("pwd") String pwd){
